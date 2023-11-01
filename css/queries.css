@@ -1,0 +1,92 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1 rem = 1em = 16px */
+
+@media (max-width: 77.5em) {
+  [class*="container"] {
+    width: 100%;
+  }
+
+  .grid-footer {
+    column-gap: 10rem;
+  }
+}
+
+@media (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 52.5em) {
+  .top-nav-list {
+    gap: 2rem;
+  }
+
+  .logo {
+    width: 20%;
+    height: 20%;
+  }
+  .form-container,
+  .how-container,
+  .access-container,
+  .grid-footer,
+  .footer-nav ul {
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+  }
+
+  .top-form {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .left-side-section {
+    order: 1;
+  }
+
+  .side-picture {
+    margin-bottom: 20rem;
+  }
+
+  .testimonial {
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+  }
+
+  .bottom-form {
+    justify-self: center;
+    place-items: center;
+    width: 100%;
+  }
+  .bottom-logo {
+    margin-bottom: 4rem;
+  }
+  .contact-col {
+    margin-bottom: 4rem;
+  }
+  .grid-footer,
+  .footer-nav ul {
+    justify-items: start;
+    margin-bottom: 4rem;
+  }
+  .footer-nav ul:nth-child(7) {
+    margin-bottom: 4rem;
+  }
+  .li-2,
+  .li-4,
+  .li-6 {
+    order: 2;
+  }
+
+  .li-7 {
+    margin-bottom: 4rem !important;
+  }
+  .social-icons {
+    justify-self: center;
+  }
+  .btn-long,
+  .bottom-form input {
+    width: 80%;
+  }
+}

@@ -1,0 +1,357 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Very Dark Blue: hsl(243, 87%, 12%)
+- Desaturated Blue: hsl(238, 22%, 44%)
+
+### Accent
+
+- Bright Blue: hsl(224, 93%, 58%)
+- Moderate Cyan: hsl(170, 45%, 43%)
+
+### Neutral
+
+- Light Grayish Blue: hsl(240, 75%, 98%)
+- Light Gray: hsl(0, 0%, 75%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Fonts
+
+#### Headings, Call-to-actions, Header Navigation
+
+- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Weights: 400, 700
+
+#### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400 */
+
+/**** GENERAL STYLES ****/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-2diff-cols {
+  grid-template-columns: 60fr 40fr;
+}
+/**** GENERAL STYLES END ****/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin: auto;
+}
+
+h1,
+h2,
+nav,
+form {
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+header,
+main,
+footer {
+  margin: 0 auto;
+}
+
+[class*="container"] {
+  width: 128rem;
+  margin: 0 auto;
+  padding: 7rem 5rem 7rem 5rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  list-style: none;
+}
+
+.top-list-el a:link,
+.top-list-el a:visited {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+}
+
+.side-picture {
+  max-width: 100%;
+}
+
+.background-img {
+  width: 100%;
+  margin-bottom: -3px;
+  margin-top: 7rem;
+  font-family: "Raleway", sans-serif;
+}
+.top-form {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.bottom-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.top-form input,
+.bottom-form input {
+  width: 28rem;
+  height: 4.5rem;
+  padding: 2rem 0 1rem 2rem;
+  color: hsl(0, 0%, 75%);
+  font-weight: 500;
+  font-size: 1.4rem;
+  border: black solid 1px;
+  border-radius: 0.3rem;
+}
+
+.top-form input {
+  width: 28rem;
+  position: relative;
+}
+
+.bottom-form input {
+  width: 48rem;
+  border: none;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.top-form input::placeholder,
+.bottom-form input::placeholder {
+  opacity: 0.5;
+}
+
+.top-form input:invalid,
+.bottom-form input:invalid {
+  border: solid 1px #f783ac;
+}
+
+.top-form::after {
+  content: "Please check your email";
+  display: none;
+  position: absolute;
+  font-size: 1.2rem;
+  color: #f783ac;
+  font-weight: 700;
+  top: 110%;
+}
+.warning {
+  display: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(240, 75%, 98%);
+}
+.bottom-form:invalid .warning {
+  display: block;
+}
+
+.bottom-form-input::after {
+  color: hsl(240, 75%, 98%);
+  position: relative;
+}
+
+.top-form:invalid::after,
+.bottom-form-input:invalid::after {
+  display: block;
+}
+.btn {
+  background-color: #3065f8;
+  width: 20rem;
+  height: 4.5rem;
+  color: hsl(240, 75%, 98%);
+  font-weight: 700;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #83a3fb;
+}
+.section-how {
+  background-color: hsl(240, 75%, 98%);
+}
+
+.how-works-link:link,
+.how-works-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #3c9f8f;
+  font-weight: 400;
+  border-bottom: solid 1px hsl(170, 45%, 43%);
+  padding-bottom: 0.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.how-works-link:hover,
+.how-works-link:active {
+  color: #b1d9d2;
+  border-bottom: solid 1px #b1d9d2;
+}
+
+.how-works-link svg {
+  transform: translateY(4px);
+}
+.testimonial {
+  background-color: #fff;
+  width: 50%;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+}
+.testimonial-author {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: start;
+  gap: 0 1rem;
+}
+
+.testimonial-img {
+  grid-row: span 2;
+  width: 4rem;
+  border-radius: 50%;
+}
+.testimonial-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  align-self: end;
+}
+.testimonial-job {
+  font-size: 0.9rem;
+  align-self: start;
+  margin: 0;
+}
+.section-access {
+  background-color: hsl(238, 22%, 44%);
+  color: hsl(240, 75%, 98%);
+}
+
+.access-container {
+  align-items: center;
+}
+
+.bottom-form {
+  justify-self: end;
+}
+footer {
+  background-color: hsl(243, 87%, 12%);
+  color: hsl(240, 75%, 98%);
+}
+
+.grid-footer {
+  grid-template-columns: 1.5fr 2fr 1fr;
+  column-gap: 20rem;
+}
+
+.bottom-logo {
+  margin-bottom: 2rem;
+}
+
+.contact-col-items {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: hsl(240, 75%, 98%);
+}
+
+.contact-col p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.footer-nav ul {
+  column-gap: 20rem;
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+.footer-nav ul li {
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  border: 1px solid hsl(240, 75%, 98%);
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
+}
+
+.contact-col-items:hover,
+.contact-col-items :hover,
+.footer-nav ul li:hover,
+.social-icon:hover {
+  cursor: pointer;
+  fill: #585989;
+  border-color: hsl(238, 22%, 44%);
+  color: hsl(238, 22%, 44%);
+  stroke: hsl(238, 22%, 44%);
+}
